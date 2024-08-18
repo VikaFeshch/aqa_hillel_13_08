@@ -23,22 +23,22 @@ side_2 = 2
 side_3 = 3
 side_4 = 4
 
-# task 06 == Порахуйте периметр фігури з task 05
-# та виведіть його для користувача
+# task 06 == Calculate the perimeter of the figure from task 05
+# and print it for the user
 perimetery = side_1 + side_2 + side_3 + side_4
 print(perimetery)
 
 
 """
-    # Задачі 07 -10:
-    # Переведіть задачі з книги "Математика, 2 клас"
-    # на мову пітон і виведіть відповідь, так, щоб було
-    # зрозуміло дитині, що навчається в другому класі
+    # Tasks 07 -10:
+    # Translate tasks from the book "Mathematics, 2nd grade"
+    # into the Python language and output the answer in a way that
+    # would be understandable to a child studying in the second grade
 """
 # task 07
 """
-У саду посадили 4 яблуні. Груш на 5 більше яблунь, а слив - на 2 менше.
-Скільки всього дерев посадили в саду?
+4 apple trees were planted in the garden. Pears are 5 more than apple trees, and plums are 2 less.
+How many trees were planted in the garden?
 """
 
 apple = 4
@@ -49,9 +49,9 @@ print("There are", all_trees, "trees in the garden")
 
 # task 08
 """
-До обіда температура повітря була на 5 градусів вище нуля.
-Після обіду температура опустилася на 10 градусів.
-Надвечір потепліло на 4 градуси. Яка температура надвечір?
+By noon, the air temperature was 5 degrees above zero.
+After lunch, the temperature dropped by 10 degrees.
+In the evening it warmed by 4 degrees. What is the temperature at night?
 """
 
 am = 5
@@ -61,9 +61,9 @@ print("The temperature in the evening was", evn, "degrees")
 
 # task 09
 """
-Взагалі у театральному гуртку - 24 хлопчики, а дівчаток - вдвічі менше.
-1 хлопчик захворів та 2 дівчинки не прийшли сьогодні.
-Скількі сьогодні дітей у театральному гуртку?
+In general, there are 24 boys in the theater group, and half as many girls.
+1 boy got sick and 2 girls didn't come today.
+How many children are there in the theater group today?
 """
 
 boys = 24
@@ -73,9 +73,9 @@ print("Today there are", child_today,"children in the theater group")
 
 # task 10
 """
-Перша книжка коштує 8 грн., друга - на 2 грн. дороже,
-а третя - як половина вартості першої та другої разом.
-Скільки будуть коштувати усі книги, якщо купити по одному примірнику?
+The first book costs UAH 8, the second - UAH 2. more expensive
+and the third - as half the cost of the first and second together.
+How much will all the books cost if you buy one copy each?
 """
 cost_book_1 = 8
 cost_book_2 = cost_book_1 + 2
