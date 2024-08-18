@@ -1,5 +1,6 @@
-def test_login():
-    # open login_page
+
+ def test_login():
+    # Open login page
     # Enter email
     # Enter password
     # Click submit
