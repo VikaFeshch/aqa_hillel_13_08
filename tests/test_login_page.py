@@ -1,5 +1,5 @@
 
- def test_login_as_suoer_admin():
+ def test_login_as_super_admin():
     # Open login page
     # Enter email
     # Enter password
