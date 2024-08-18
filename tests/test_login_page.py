@@ -4,4 +4,5 @@
     # Enter email
     # Enter password
     # Click submit
+    # Verify I was logged
     pass
