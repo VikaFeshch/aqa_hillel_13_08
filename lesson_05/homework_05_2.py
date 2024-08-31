@@ -23,10 +23,10 @@ people_records = [
 ]
 
 #1
-people_records.insert(0,('Ron', 'Sesh', 28, 'Desiner', 'Paris'))
+people_records.insert(0, ('Ron', 'Sesh', 28, 'Desiner', 'Paris'))
 
 #2
-people_records[1],people_records[5] = people_records[5],people_records[1]
+people_records[1], people_records[5] = people_records[5],people_records[1]
 
 #3
 res_check = 0
