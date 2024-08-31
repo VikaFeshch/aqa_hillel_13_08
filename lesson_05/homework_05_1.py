@@ -46,6 +46,6 @@ car_data = {
 }
 search_criteria = (2017, 1.6, 36000)
 sort_car = {key: value for key, value in car_data.items() if (value[1] >= search_criteria[0]) and (value[2] >= search_criteria[1]) and (value[4] <= search_criteria[2])}
-sorted_car = dict(sorted(sort_car.items(),key=lambda item: item[1][4])[:5])
+sorted_car = dict(sorted(sort_car.items(), key=lambda item: item[1][4])[:5])
 for key in sorted_car:
     print(key, ': ', sorted_car[key])
