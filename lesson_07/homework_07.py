@@ -140,7 +140,7 @@ and has been a major settlement for nearly 2,000 years."""
 
 def count_words(ch_text):
     text_sentences = re.split(r'(?<=[.!?])\s+', ch_text)
-    return len(text_sentences[len(text_sentences)-1].split())
+    return len(text_sentences[len(text_sentences) - 1].split())
 
 print(f"The amount of words in the last sentence in the text is {count_words(text)}")
 
