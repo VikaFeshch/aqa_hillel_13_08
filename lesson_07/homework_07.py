@@ -19,7 +19,7 @@ def multiplication_table(number):
         #Complete the while loop condition.
         while multiplier <= 25:
             result = number * multiplier
-            if  result > 25 or result == 0:
+            if result > 25 or result == 0:
                 break
             print(number, "x", multiplier, "=", result)
 
