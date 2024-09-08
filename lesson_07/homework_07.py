@@ -25,7 +25,8 @@ def multiplication_table(number):
 
             # Increment the appropriate variable
             multiplier += 1
-    else: print("Not valid number")
+    else: 
+        print("Not valid number")
 
 multiplication_table(3)
 
