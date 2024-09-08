@@ -39,7 +39,7 @@ delimiter(2)
 def sum(num_1, num_2):
     print(f"Sum of two numbers {num_1} & {num_2} is {num_1 + num_2}")
 
-sum(2,5)
+sum(2, 5)
 
 # task 3
 """  Написати функцію, яка розрахує середнє арифметичне списку чисел.
