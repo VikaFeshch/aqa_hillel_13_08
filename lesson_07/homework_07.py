@@ -176,8 +176,3 @@ def am_upper_words(ch_text):
             count_words_is_upper += 1
     return count_words_is_upper
 print(f"The words with the first upper letter are {am_upper_words(text)} times")
-
-"""  Оберіть будь-які 4 таски з попередніх домашніх робіт та
-перетворіть їх у 4 функції, що отримують значення та повертають результат.
-Обоязково документуйте функції та дайте зрозумілі імена змінним.
-"""
