@@ -115,7 +115,7 @@ print(find_substring(str1, str2)) # поверне -1
 delimiter(7)
 
 def total(dist, f_cons):
-    return dist/100*f_cons
+    return dist/  100 * f_cons
 
 def stop_times(total, t_cap):
     return total / t_cap
