@@ -24,7 +24,7 @@ def test_log_event_success():
     log_event(username, status)
     content_of_file = read_log_file()
 
-    assert "Login event - Username: user1, Status: success" in content_of_file
+    assert f"Login event - Username: {username}, Status: {status}" in content_of_file
 
 
 def test_log_event_expired():
