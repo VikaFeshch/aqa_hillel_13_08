@@ -58,7 +58,7 @@ def divide_2(a, b):
 result = divide_2(2, 3)
 print(result)
 result = divide_2(1, 0)
-
+print(result)
 ##################################################################################
 def get_element_by_index(lst, index):
     el = None
@@ -140,7 +140,8 @@ def read_test_data(file_path):
             file.close()
         except NameError:
             print("File wasn't opened")
-example_file_path = "/Users/feshv/hillel_py/aqa_hillel_13_08/lesson8/test_cases.txt"
+example_file_path = r"C:\Users\feshv\hillel_py\aqa_hillel_13_08\lesson_08\test_cases.txt"
+
 read_test_data(example_file_path)
 sep()
 ##################################################################################
@@ -213,46 +214,46 @@ class TooLargeValueError(Exception):
 #     print(f"Error: {e}")
 # except ValueError:
 #     print("Enter positive number.")
-sep()
-##################################################################################
-# with
-with open(example_file_path, 'r') as file:
-    data = file.read()
-    print(data)
-sep()
-##################################################################################
-import sqlite3
-from contextlib import contextmanager
-
-@contextmanager
-def db_connection(db_name):
-    with sqlite3.connect(db_name) as conn:
-        # cursor -> object used to interact with db
-        cursor = conn.cursor()
-        yield cursor
-        # connection will be auto closed
-
-db_path = "/Users/feshv/hillel_py/aqa_hillel_13_08/lesson8/test_db.sqlite"
-def add_data(db_path=db_path):
-    with db_connection(db_path) as cursor:
-        cursor.execute(
-            """
-            CREATE TABLE IF NOT EXISTS users 
-            (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)
-            """
-        )
-        cursor.execute("INSERT INTO users (name, age) VALUES ('Alice', 30)")
-        cursor.execute("INSERT INTO users (name, age) VALUES ('Bob', 40)")
-
-        # cursor will be closed
-
-def output_data(db_path=db_path):
-    with db_connection(db_path) as cursor:
-        cursor.execute("SELECT * FROM users")
-        rows = cursor.fetchall()
-        for row in rows:
-            print(row)
-
-add_data()
-output_data()
-##################################################################################
+# sep()
+# ##################################################################################
+# # with
+# with open(example_file_path, 'r') as file:
+#     data = file.read()
+#     print(data)
+# sep()
+# ##################################################################################
+# import sqlite3
+# from contextlib import contextmanager
+#
+# @contextmanager
+# def db_connection(db_name):
+#     with sqlite3.connect(db_name) as conn:
+#         # cursor -> object used to interact with db
+#         cursor = conn.cursor()
+#         yield cursor
+#         # connection will be auto closed
+#
+# db_path = "/Users/feshv/hillel_py/aqa_hillel_13_08/lesson8/test_db.sqlite"
+# def add_data(db_path=db_path):
+#     with db_connection(db_path) as cursor:
+#         cursor.execute(
+#             """
+#             CREATE TABLE IF NOT EXISTS users
+#             (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)
+#             """
+#         )
+#         cursor.execute("INSERT INTO users (name, age) VALUES ('Alice', 30)")
+#         cursor.execute("INSERT INTO users (name, age) VALUES ('Bob', 40)")
+#
+#         # cursor will be closed
+#
+# def output_data(db_path=db_path):
+#     with db_connection(db_path) as cursor:
+#         cursor.execute("SELECT * FROM users")
+#         rows = cursor.fetchall()
+#         for row in rows:
+#             print(row)
+#
+# add_data()
+# output_data()
+# ##################################################################################
