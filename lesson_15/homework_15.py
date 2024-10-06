@@ -15,7 +15,6 @@
 
 
 class Rhombus:
-
     def __setattr__(self, key, value):
         if key == "side_a":
             if self.__check_side(value):
@@ -27,13 +26,12 @@ class Rhombus:
                 super().__setattr__(key, value)
                 super().__setattr__("angle_b", 180 - value)
             else:
-                print(f"Not valid meaning angle of rhombus: {self.angle_a}. It must be > 0 and < 180")
+                print(f"Not valid meaning angle of rhombus: {value}. It must be > 0 and < 180")
         else:
             print(f"Invalid attribute: {key}. Rhombus only has 'side_a' and 'angle_a'.")
 
-
     def __str__(self):
-        return f"angel_a {rhombus.angle_a}, angel_b {rhombus.angle_b}, side a = {rhombus.side_a}"
+        return f"angel_a {self.angle_a}, angel_b {self.angle_b}, side a = {self.side_a}"
 
     def __check_side(self, v):
         return v > 0
@@ -44,28 +42,32 @@ class Rhombus:
 
 rhombus = Rhombus()
 
+
 def test_valid_data():
     rhombus.side_a = 5
     rhombus.angle_a = 60
-    print(rhombus)
+    assert str(rhombus) == "angel_a 60, angel_b 120, side a = 5"
 
 def test_side_of_rhombus():
-    rhombus.side_a = 0
-    rhombus.angle_a = 170
-    print(rhombus)
+    try:
+        rhombus.side_a = 0
+    except ValueError as e:
+        assert str(e) == "Side of rhombus must be greater than 0"
 
 def test_angle_of_rhombus():
-    rhombus.side_a = 5
-    rhombus.angle_a = 190
-    print(rhombus)
+    try:
+        rhombus.angle_a = 190
+    except ValueError as e:
+        assert str(e) == "Not valid meaning angle of rhombus: 190. It must be > 0 and < 180"
 
-def test_not_valide_attribute():
-    rhombus.side_b = 10
-    rhombus.angle_a = 170
-    print(rhombus)
+def test_not_valid_attribute():
+    try:
+        rhombus.side_b = 10
+    except AttributeError as e:
+        assert str(e) == "Invalid attribute: 'side_b'. Rhombus only has 'side_a' and 'angle_a'."
 
 
 test_valid_data()
 test_side_of_rhombus()
 test_angle_of_rhombus()
-test_not_valide_attribute()
+test_not_valid_attribute()
