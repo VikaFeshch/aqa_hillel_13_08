@@ -16,6 +16,7 @@ gen = get_values_yield()
 print(next(gen))
 print(next(gen))
 print(next(gen))
+# print(next(gen))
 
 print("-" * 10)
 def countdown(num):
@@ -23,7 +24,7 @@ def countdown(num):
         yield num ** 2
         num -= 1
 
-c = countdown(1000)
+c = countdown(4)
 print(next(c))
 print(next(c))
 print(next(c))
