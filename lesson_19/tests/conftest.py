@@ -1,4 +1,4 @@
-from lesson19.src.clients.swapi_client import SwapiClient
+from lesson_19.src.clients.swapi_client import SwapiClient
 from pytest import fixture
 import logging
 
