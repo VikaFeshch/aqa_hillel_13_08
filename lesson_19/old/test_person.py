@@ -1,7 +1,7 @@
 import pytest
 from datetime import datetime
 
-from lesson19.src.clients.swapi_client import SwapiClient
+from lesson_19.src.clients.swapi_client import SwapiClient
 
 client = SwapiClient()
 
