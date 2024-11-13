@@ -28,6 +28,8 @@ def authenticated_session():
         ('brand', 50, 200),
         ('price', 30, 200),
         ('year', 10, 200),
+        ('year', 0, 400),
+        ('name', 10, 422),
         ('engine_volume', 5, 200),
     ]
 )
@@ -38,4 +40,24 @@ def test_get_cars(sort_by, limit, expected_status, authenticated_session):
     print(f"Response Data: {response.json()}")
     logging.info(f"Response Status Code: {response.status_code}")
     assert response.status_code == expected_status
+    if response.status_code == 200:
+        assert len(response.json()) <= limit, "Received more items than allowed by the limit"
+    if response.status_code == 200:
+        data = response.json()
+        if limit > 0:
+            assert len(data) <= limit, f"Received more items than limit: {limit}"
+
+        for car in data:
+            assert 'brand' in car, "Missing 'brand' field in car data"
+            assert 'year' in car, "Missing 'year' field in car data"
+            assert 'engine_volume' in car, "Missing 'engine_volume' field in car data"
+            assert 'price' in car, "Missing 'price' field in car data"
+
+    elif response.status_code == 400:
+        error_message = response.json().get('message', '')
+        assert "limit must be greater than zero" in error_message.lower(), "Unexpected error message"
+
+    elif response.status_code == 422:
+        error_message = response.json().get('message', '')
+        assert error_message, f"Invalid sort field: {sort_by}"
 

@@ -75,7 +75,16 @@ def login():
 def get_cars():
     sort_by = request.args.get('sort_by')
     limit = request.args.get('limit')
-
+    valid_sort_fields = {'brand', 'year', 'engine_volume', 'price'}
+    if sort_by and sort_by not in valid_sort_fields:
+        return jsonify({"message": f"Invalid sort field: {sort_by}"}), 422
+    if limit:
+        try:
+            limit = int(limit)
+            if limit <= 0:
+                return jsonify({"message": "Limit must be greater than zero"}), 400
+        except ValueError:
+            return jsonify({"message": "Limit must be an integer"}), 400
     sorted_cars = sorted(cars_db.values(), key=lambda x: x.get(sort_by, 0) if sort_by else x['brand'])
     limited_cars = sorted_cars[:int(limit)] if limit else sorted_cars
 
