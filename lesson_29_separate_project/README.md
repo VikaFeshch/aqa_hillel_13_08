@@ -15,3 +15,4 @@ docker run --rm -it lesson_29-hw29:latest bash
 # Run locally with report creation
 pytest --html=local_reports/report.html
 ```
+

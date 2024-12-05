@@ -8,4 +8,3 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 CMD ["pytest", "tests/test_hw_29_postgres.py", "--headless"]
-
