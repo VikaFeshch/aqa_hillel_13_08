@@ -1,13 +1,17 @@
+import pytest
+import allure
+
 from src.models.car_model import Car
 
 from src.pages.garage_page import GaragePage
 
 from tests.base_test import BaseTest
 
-
+@allure.epic("Car Garage Epic")
+@allure.feature("Instructions Feature")
 class TestGaragePage(BaseTest):
     """Test Garage pages"""
-
+    @allure.story("Add car")
     def test_add_car(self, driver, auto_config):
         # Login as guest
         self.login_as_guest(driver, auto_config)

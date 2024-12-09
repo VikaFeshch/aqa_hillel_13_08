@@ -1,3 +1,4 @@
+import allure
 import pytest
 from src.models.car_model import Car
 from src.pages.instructions_page import InstructionsPage
@@ -5,7 +6,8 @@ from src.utils.files_utils import FileUtils
 from tests.base_test import BaseTest
 from assertpy import assert_that
 
-
+@allure.epic("Car Garage Epic")
+@allure.feature("Instructions Feature")
 class TestInstructionsPage(BaseTest):
     """Test Instructions pages"""
 

@@ -1,0 +1,10 @@
+2024-10-24 20:13:04 DEBUG Starting new HTTPS connection (1): api.nasa.gov:443
+2024-10-24 20:13:07 DEBUG https://api.nasa.gov:443 "GET /mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=LVKtvhfQ6GtrOFan3fkefHHc8IPWiaAdOUlf2M9W HTTP/11" 200 None
+2024-10-24 20:13:07 DEBUG Starting new HTTP connection (1): mars.jpl.nasa.gov:80
+2024-10-24 20:13:07 DEBUG http://mars.jpl.nasa.gov:80 "GET /msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG HTTP/11" 301 178
+2024-10-24 20:13:07 DEBUG Starting new HTTPS connection (1): mars.nasa.gov:443
+2024-10-24 20:13:07 DEBUG https://mars.nasa.gov:443 "GET /msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG HTTP/11" 200 417579
+2024-10-24 20:13:07 DEBUG Starting new HTTP connection (1): mars.jpl.nasa.gov:80
+2024-10-24 20:13:08 DEBUG http://mars.jpl.nasa.gov:80 "GET /msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG HTTP/11" 301 178
+2024-10-24 20:13:08 DEBUG Starting new HTTPS connection (1): mars.nasa.gov:443
+2024-10-24 20:13:08 DEBUG https://mars.nasa.gov:443 "GET /msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG HTTP/11" 200 448335

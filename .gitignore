@@ -53,6 +53,11 @@ coverage.xml
 .pytest_cache/
 cover/
 
+allure-results/
+allure-report/
+
+.vscode/
+
 # Translations
 *.mo
 *.pot

@@ -1,8 +1,8 @@
 import pytest
 from selenium.webdriver import Chrome, ChromeOptions, FirefoxOptions, Firefox, Remote
 
-from src.utils.settings_reader import SettingsReader
-
+# from src.utils.settings_reader import SettingsReader
+from .src.utils.settings_reader import SettingsReader
 qa_auto_config = {}  # Config()
 
 def pytest_addoption(parser):
