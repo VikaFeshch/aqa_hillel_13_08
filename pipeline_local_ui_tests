@@ -27,12 +27,17 @@ pipeline {
                 '''
             }
         }
+    }
+
     post {
         always {
-            allure includeProperties:
-                false,
-                jdk: '',
-                results: [[path: 'allure-results']]
+            script {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'lesson_29_separate_project/../allure-results']]
+                ])
+            }
         }
     }
 }
