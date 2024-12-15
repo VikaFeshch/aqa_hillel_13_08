@@ -31,12 +31,10 @@ pipeline {
 
     post {
         always {
-            script {
-                allure([
-                    includeProperties: false,
-                    jdk: '',
-                    results: [[path: 'lesson_29_separate_project/../allure-results']]
-                ])
+            allure(
+                includeProperties: false,
+                jdk: '',
+                results:  [[path: 'lesson_29_separate_project/../allure-results']]
             }
         }
     }
