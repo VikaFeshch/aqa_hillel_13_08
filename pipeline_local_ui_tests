@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/VikaFeshch/aqa_hillel_13_08'
+            }
+        }
+        stage('Install dependencies') {
+            steps {
+                bat '''
+                python -m venv venv
+                call venv\\Scripts\\activate.bat
+                python -m pip install --upgrade pip setuptools
+                pip install -r lesson_29_separate_project/requirements.txt
+                pip list
+                '''
+            }
+        }
+        stage('Run tests') {
+            steps {
+                bat '''
+                call venv\\Scripts\\activate.bat
+                cd lesson_29_separate_project
+                ..\\venv\\Scripts\\python -m pytest tests/test_hw_30+hw_29_postgres.py --alluredir=../allure-results
+                '''
+            }
+        }
+        stage('Publish results') {
+            steps {
+                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+            }
+        }
+    }
+}
