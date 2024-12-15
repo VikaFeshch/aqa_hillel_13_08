@@ -35,7 +35,7 @@ pipeline {
                 includeProperties: false,
                 jdk: '',
                 results:  [[path: 'lesson_29_separate_project/../allure-results']]
-            }
+            )
         }
     }
 }
